@@ -9,8 +9,11 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # CSVファイル名
-# csv_file="./translations/translations.csv"
 csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/translations/translations.csv"
+temp_file="/tmp/translations.csv"
+
+# CSVファイルを一時ファイルにダウンロードする
+curl -sS $csv_file > $temp_file
 
 # 言語の選択
 echo
@@ -35,7 +38,7 @@ case $lang_choice in
     ;;
 esac
 
-# CSVファイルからメッセージを読み込み
+# 一時ファイルからメッセージを読み込み
 while read line; do
     # キー名を取得
     # cutコマンドで`|`を区切り文字とし、1列目のフィールドを抽出
@@ -45,7 +48,10 @@ while read line; do
     message=$(echo $line | awk -F '|' '{print $'$lang_col'}')
     # 変数に格納
     eval "$key=\"$message\""
-done <$csv_file
+done <$temp_file
+
+# 一時ファイルを削除
+rm $temp_file
 
 echo
 # リモートサーバーのIPアドレスを取得する
