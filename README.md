@@ -62,7 +62,7 @@ chmod +x goracle_backup.sh
 もしくは -->
 
 ```
-wget https://github.com/Moon1215i/goracle_backup.sh
+curl -O https://github.com/11ppm/goracle_backup.sh
 chmod +x goracle_backup.sh
 ```
 
