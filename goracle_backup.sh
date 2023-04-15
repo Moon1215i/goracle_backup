@@ -9,7 +9,8 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # CSVファイル名
-csv_file="./translations/translations.csv"
+# csv_file="./translations/translations.csv"
+csv_file="https://github.com/Moon1215i/goracle_backup/blob/main/translations/translations.csv"
 
 # 言語の選択
 echo
@@ -108,7 +109,6 @@ if [ $sshkey_exists -eq 1 ]; then
     echo
     echo
     echo
-    echo
     echo -e "${YELLOW}                             $REMOTE_SERVER    =====>>    $LOCAL_MACHINE                             ${NC}"
     echo -e "${YELLOW}-----------------------------------------------------------------------------------------------------${NC}"
     echo
@@ -122,7 +122,6 @@ if [ $sshkey_exists -eq 1 ]; then
     echo
     echo
     echo
-    echo
     echo -e "${NC}                             $REMOTE_SERVER    <<=====    $LOCAL_MACHINE                             ${NC}"
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
@@ -132,8 +131,6 @@ if [ $sshkey_exists -eq 1 ]; then
     echo -e "${NC}$UPLOAD_BACKUP${NC}"
     echo
     echo -e "${NC}$NOTE: $REPLACE${NC} ${RED}${private_key}${NC}${NC} $PRIVATE_KEY_PATH_FILENAME${NC}"
-    echo
-    echo
     echo
     echo
     echo
