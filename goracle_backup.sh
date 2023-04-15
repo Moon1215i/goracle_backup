@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # CSVファイル名
 # csv_file="./translations/translations.csv"
-csv_file="https://github.com/Moon1215i/goracle_backup/blob/main/translations/translations.csv"
+csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/translations/translations.csv"
 
 # 言語の選択
 echo
