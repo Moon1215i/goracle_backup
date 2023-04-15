@@ -72,6 +72,7 @@ cd goracle_backup
 chmod +x goracle_backup.sh
 ```
 もしくは -->
+<br>
 
 ### 4-1
 次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
@@ -79,6 +80,8 @@ chmod +x goracle_backup.sh
 cd ~ && curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh
 chmod +x goracle_backup.sh
 ```
+
+<br>
 
 ### 4-2
 シェルスクリプトを実行します
@@ -139,13 +142,15 @@ To upload backup files from your local machine to the GORACLE Node,run the follo
 Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your private key.
 ```
 
+<br>
+
 #### 4-3
 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
  
 <br>
 <br>
 
-## 5. ローカルマシン（Linux,Mac,WSL2の場合）
+# 5. ローカルマシン（Linux,Mac,WSL2の場合）
 
 Terminalを開いて、先ほどのコマンドを貼り付けて、実行してください。
  
