@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="img/img1.png" alt="Moon1215i_twitter">
+<img src="img/img1.png" width="400" alt="Moon1215i_twitter">
 </a>
 </p>
 <br/>
