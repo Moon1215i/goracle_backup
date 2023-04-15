@@ -144,7 +144,7 @@ Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your p
 
 <br>
 
-#### 4-3
+### 4-3
 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
  
 <br>
