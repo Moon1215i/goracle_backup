@@ -31,7 +31,6 @@
      * `tranlations.csv`を作成し、日本語と英語に対応させました
      * 必要であれば、他の言語にも対応しますので、お知らせください
  
-
 <br>
 <br>
 
@@ -41,11 +40,10 @@
 3. 同時に、ローカルからゴラクルノードへ、バックアップファイルを`.goracle`に転送するコマンドも作成します
 4. このリポジトリは、`ssh-key`にも対応しています
  
-
 <br>
 <br>
 
-## 3. rsyncの機能について
+# 3. rsyncの機能について
 `rsync`は、ファイル同期ツールで、主に異なる場所にあるファイル/ディレクトリを同期するために使用されます。rsyncは、ローカルマシンとリモートマシン間でファイルを同期し、ネットワークを通じてファイルを転送することができます。
 
 rsyncの主な特徴は、変更された部分のみを転送できることです。つまり、ソースと宛先のファイルの差分を計算し、差分のある部分だけを転送することで、大量のデータを転送する際に非常に効率的に動作します。
@@ -60,8 +58,9 @@ rsyncの主な特徴は、変更された部分のみを転送できることで
 ```sh
 sudo apt install rsync
 ```
-
-
+ 
+<br>
+<br>
 
 ## 4. スクリプトの実行
 
@@ -74,14 +73,14 @@ chmod +x goracle_backup.sh
 ```
 もしくは -->
 
-#### 4-1
+### 4-1
 次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
 ```
 cd ~ && curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh
 chmod +x goracle_backup.sh
 ```
 
-#### 4-2
+### 4-2
 シェルスクリプトを実行します
 ```sh
 ./goracle_backup.sh
@@ -142,19 +141,22 @@ Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your p
 
 #### 4-3
 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
-
-
+ 
+<br>
+<br>
 
 ## 5. ローカルマシン（Linux,Mac,WSL2の場合）
 
 Terminalを開いて、先ほどのコマンドを貼り付けて、実行してください。
-
-
+ 
+<br>
+<br>
 
 Note: 
 * Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができましファイルがある
-
-
+ 
+<br>
+<br>
 
 ## Author
 
