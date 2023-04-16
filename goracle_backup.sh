@@ -9,7 +9,8 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # CSVファイル名
-csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/translations/translations.csv"
+csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/translations/translations3.csv"
+# csv_file="translations3.csv"
 temp_file="/tmp/translations.csv"
 
 # CSVファイルを一時ファイルにダウンロードする
@@ -21,6 +22,7 @@ echo "Select a language 言語を選択してください :"
 echo
 echo "1. English"
 echo "2. 日本語"
+echo "3. İngilizce"
 echo
 read -t30 -p "Enter the number 数字を入力してください : " lang_choice
 
@@ -31,6 +33,9 @@ case $lang_choice in
     ;;
 2)
     lang_col=3 # 日本語列
+    ;;
+3)
+    lang_col=4 # トルコ語列
     ;;
 *)
     echo "無効な選択です。"
@@ -48,6 +53,7 @@ while read line; do
     message=$(echo $line | awk -F '|' '{print $'$lang_col'}')
     # 変数に格納
     eval "$key=\"$message\""
+# done <$csv_file
 done <$temp_file
 
 # 一時ファイルを削除

@@ -1,0 +1,26 @@
+kkey|english|japanese|turkish
+LANG|English|日本語|İngilizce
+GET_IP_ADDRESS|GORACLE Node IP Address|ゴラクルノードのIPアドレスを取得する|GORACLE Düğümü IP Adresini Al
+GET_REMOTE_USER|Get the current user as the remote username|リモートユーザーとして現在のユーザーを取得する|Mevcut Kullanıcıyı Uzak Kullanıcı Olarak Al
+SET_REMOTE_BACKUP_DIR|Set the remote backup directory|リモートバックアップディレクトリを設定する|Uzak Yedekleme Dizinini Ayarla
+SET_LOCAL_BACKUP_DIR|Set the local directory to save backup files|バックアップファイルを保存するローカルディレクトリを設定する|Yedekleme Dosyalarını Kaydetmek İçin Yerel Dizini Ayarla
+GET_SSH_PORT|Get the ssh port number from the sshd_config file|sshd_configファイルからsshポート番号を取得する|sshd_config Dosyasından SSH Port Numarasını Al
+CHECK_SSH_KEYS|Check if SSH keys exist|SSHキーが存在するかを確認する|SSH Anahtarları Mevcut mu Kontrol Et
+RSYNC_SSH_KEYS|Rsync with SSH keys|SSHキーを使用してrsyncを実行する|SSH Anahtarları ile Rsync Yap
+RSYNC_WITHOUT_SSH_KEYS|Rsync without SSH keys|SSHキーを使用せずにrsyncを実行する|SSH Anahtarları Olmadan Rsync Yap
+SSH_KEY_DETECTED|SSH key type|SSH key type|SSH key type
+DOWNLOAD_BACKUP|To download a backup file from the GORACLE Node, run this command in your local machine's terminal.|ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末でこのコマンドを実行します|GORACLE Düğümünden Yedekleme Dosyası İndirmek İçin, Bu Komutu Yerel Makinenizin Terminalinde Çalıştırın
+REMOTE_SERVER|GORACLE Node|ゴラクルノード|GORACLE Düğümü
+LOCAL_MACHINE|Local Machine|ローカルマシン|Yerel Makine
+UPLOAD_BACKUP|To upload a backup file from your local machine to the GORACLE node, run this command in your local machine's terminal.|ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルでこのコマンドを実行します|Yerel Makinenizden GORACLE düğümüne bir yedekleme dosyası yüklemek için, bu komutu yerel makinenizin terminalinde çalıştırın
+SSH_KEY_NOT_DETECTED|※ SSH key was not detected|※ SSHキーは検出されませんでした|SSH anahtarı tespit edilmedi
+REPLACE|Replace||Değiştir
+PRIVATE_KEY_PATH_FILENAME|with the appropriate path and filename of your private key.|の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください|Özel anahtarınızın yolu ve dosya adını uygun şekilde girin.
+GORACLE_NODE_IP|IP Address|IP Address|IP Address
+GORACLE_NODE_USER|User|User|User
+GORACLE_NODE_BACKUP_FILE|Backup File|Backup File|Backup File
+GORACLE_NODE_LOCAL_DIR|Local Directory|Local Directory|Local Directory
+GORACLE_NODE_SSH_PORT|SSH Port|SSH Port|SSH Port
+GORACLE_NODE_SSHKEY_TYPE|SSH Key Type|SSH Key Type|SSH Key Type
+NOTE|Note|重要|Not
+YOUR_GORACLE_NODE|Your GORACLE Node|Your GORACLE Node|Your GORACLE Node
