@@ -1,4 +1,4 @@
-key|english|japanese
+key|english|japanese|
 LANG|English|日本語
 GET_IP_ADDRESS|GORACLE Node IP Address|ゴラクルノードのIPアドレスを取得する
 GET_REMOTE_USER|Get the current user as the remote username|リモートユーザーとして現在のユーザーを取得する
