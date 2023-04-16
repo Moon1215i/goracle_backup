@@ -194,7 +194,7 @@ To use `rsync` or `scp` on Windows, you need to set up `WSL2` or `Cygwin` separa
 <img src="img/download1.png">
 
 1. Copy the displayed command.
-2. Open the terminal on your regular machine such as Mac, Windows, or Linux.
+2. Open the terminal on your regular machine such as Mac or Linux.
 3. Paste the command there and run it.
 
 <br>
@@ -226,14 +226,14 @@ The `.ssh` folder is usually located in the `hidden folder` of the user's home d
 <img src="img/upload1.png">
 
 1. Copy the displayed command.
-2. Open the terminal on your regular machine such as Mac, Windows, or Linux.
+2. Open the terminal on your regular machine such as Mac or Linux.
 3. Paste the command there and run it.
 
 <br>
 <img src="img/upload2.png">
 
  1. I deleted the `.goracle` file on the Goracle node in advance.
- 2. Execute the upload command on your local machine such as Mac, Windows, or Linux.
+ 2. Execute the upload command on your local machine such as Mac or Linux.
  3. The `.goracle` file should be visible after the upload.
  4. By opening the `.goracle` file, we can confirm that it has been restored to its original state.
 
