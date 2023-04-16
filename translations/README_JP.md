@@ -10,8 +10,8 @@
 [README English](https://github.com/Moon1215i/goracle_backup)
 
 `.goracle`は、Goracleノードの設定ファイルで、Algorandネットワーク上のGoracleノードが参加するためのアカウントと、Algorandノードへの接続情報が含まれています。Goracleノードを初期化する際に、このファイルが作成されます。この極めて重要なファイルをバックアップすることは、Goracleノードオペレーターにとって最優先のタスクです。また、Goracleノードの不具合やVPSの問題、別のVPSに移行する際にも必要となります。このため、バックアップや復元に役立つリポジトリを作成しました。GoracleチームやGoraGangの方々がお役に立てることを願っています。
-
- @Moon1215i
+<br>
+<h2> @Moon1215i
 
 <br>
 <br>
@@ -67,7 +67,7 @@ sudo apt install rsync
 <br>
 
 ## 4. goracle_backup リポジトリ
-
+`goracle_backup`リポジトリから`goracle_backup.sh`をダウンロードして実行します。それ以外のファイルは一時ファイルとして使用し、スクリプトの終了時に自動的に削除されます。
 <!--
 リポジトリを`git clone`し、`goracle_backup`ディレクトリに入り、`goracle_backup.sh`の実行権限を変更します。
 ```sh
@@ -81,6 +81,7 @@ chmod +x goracle_backup.sh
 ### 4-1 Goracleノードへの`goracle_backup.sh`のダウンロードと実行権限付与
 <br>
 次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
+
 ```
 cd ~ && \
 curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh && \

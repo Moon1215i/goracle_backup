@@ -11,7 +11,7 @@
 
 `.goracle` is the configuration file for the Goracle node, containing the account information required for the node to participate in the Algorand network, as well as the connection details for the Algorand node that the Goracle node will use. This file is created during the initialization of the Goracle node and is critical for backing up, restoring, and migrating the Goracle node to another VPS. As such, backing up this file is the top priority for Goracle node operators and will be necessary in case of Goracle node or VPS failure, or when migrating to another VPS. We have created a repository that can assist with backup and restoration, which we hope will be useful for the Goracle team and GoraGang members.
 <br>
-## @Moon1215i
+<h2> @Moon1215i
  
 <br>
 <br>
@@ -74,6 +74,8 @@ sudo apt install rsync
 
 ## 4. The 'goracle_backup' Repository
 
+Download and run goracle_backup.sh from the goracle_backup repository. All other files are used as temporary files and will be automatically deleted when the script ends.
+
 <!--
 リポジトリを`git clone`し、`goracle_backup`ディレクトリに入り、`goracle_backup.sh`の実行権限を変更します。
 ```sh
@@ -82,6 +84,7 @@ cd goracle_backup
 chmod +x goracle_backup.sh
 ```
 もしくは -->
+
 <br>
 
 ### 4-1 Download and set permissions for goracle_backup.sh on Goracle node

@@ -13,7 +13,7 @@ csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/transl
 temp_file="/tmp/translations.csv"
 
 # CSVファイルを一時ファイルにダウンロードする
-curl -sS $csv_file > $temp_file
+curl -sS $csv_file >$temp_file
 
 # 言語の選択
 echo
