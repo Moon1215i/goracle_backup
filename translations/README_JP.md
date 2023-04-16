@@ -183,7 +183,7 @@ Windowsで`rsync`や`scp`を使うためには、`WSL2`や`Cygwin`を別途セ�
 <img src="../img/download1.png">
 
 1. 表示されたコマンドをコピーします
-2. あなたが普段使っているMacやWindowsやLinuxでターミナルを開きます。
+2. あなたが普段使っているMacまたはLinuxでターミナルを開きます。
 3. そこにペーストして、コマンドを実行します
 
 <img src="../img/download2.png">
@@ -212,7 +212,7 @@ Windowsで`rsync`や`scp`を使うためには、`WSL2`や`Cygwin`を別途セ�
 <img src="../img/upload1.png">
 
 1. 表示されたコマンドをコピーします
-2. あなたが普段使っているMacやWindowsやLinuxでターミナルを開きます。
+2. あなたが普段使っているMacまたはLinuxでターミナルを開きます。
 3. そこにペーストして、コマンドを実行します
 
 <br>
@@ -220,7 +220,7 @@ Windowsで`rsync`や`scp`を使うためには、`WSL2`や`Cygwin`を別途セ�
 <img src="../img/upload2.png">
 
  1. 事前にGoracleノードの`.goracle`を削除しておきました
- 2. MacやWindowsやLinuxなどのローカルマシンでアップロードコマンドを実行します
+ 2. MacまたはLinuxなどのローカルマシンでアップロードコマンドを実行します
  3. アップロードされて、`.goracle`が見えます
  4. `.goracle`を開くと元に戻っていることがわかります。
 
