@@ -201,17 +201,14 @@ Please check that the .goracle file has been downloaded by opening the .ssh fold
 <br>
 
 **Below are the locations and instructions for finding the `.ssh` folder on each operating system:**
-
 <br>
 
 ### Mac
 The `.ssh` folder is located in the `hidden folder` of the user's home directory. To show the .ssh folder in Finder, open the user's home folder and press `Command+Shift+.(dot).` The `.ssh` folder will be displayed.
-
 <br>
 
 ### Windows
 The `.ssh` folder is usually located in the `hidden folder` of the user's home directory. To display the folder, you need to change the display option in Explorer. Follow [this article](https://www.howtogeek.com/446/show-hidden-files-and-folders-in-windows/) to learn how to display hidden folders.
-
 <br>
 
 ### Linux
