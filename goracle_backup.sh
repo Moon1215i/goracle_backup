@@ -136,8 +136,8 @@ if [ $sshkey_exists -eq 1 ]; then
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo -e "${NC}$UPLOAD_BACKUP${NC}"
     echo
-    echo -e "${NC}$NOTE: $REPLACE${NC} ${RED}${private_key}${NC}${NC} $PRIVATE_KEY_PATH_FILENAME${NC}"
     echo
+    echo -e "${NC}$NOTE: $REPLACE${NC} ${RED}${private_key}${NC}${NC} $PRIVATE_KEY_PATH_FILENAME${NC}"
     echo
     echo
 else

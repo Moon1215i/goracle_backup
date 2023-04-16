@@ -9,10 +9,10 @@ CHECK_SSH_KEYS|Check if SSH keys exist|SSHキーが存在するかを確認す�
 RSYNC_SSH_KEYS|Rsync with SSH keys|SSHキーを使用してrsyncを実行する
 RSYNC_WITHOUT_SSH_KEYS|Rsync without SSH keys|SSHキーを使用せずにrsyncを実行する
 SSH_KEY_DETECTED|SSH key type|SSH key type
-DOWNLOAD_BACKUP|To download backup file from the GORACLE Node,run the following command in your local machine's terminal|ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
+DOWNLOAD_BACKUP|To download a backup file from the GORACLE Node, run this command in your local machine's terminal.|ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末でこのコマンドを実行します
 REMOTE_SERVER|GORACLE Node|ゴラクルノード
 LOCAL_MACHINE|Local Machine|ローカルマシン
-UPLOAD_BACKUP|To upload backup files from your local machine to the GORACLE Node,run the following command in your terminal on the local machine.|ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
+UPLOAD_BACKUP|To upload a backup file from your local machine to the GORACLE node, run this command in your local machine's terminal.|ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルでこのコマンドを実行します
 SSH_KEY_NOT_DETECTED|※ SSH key was not detected|※ SSHキーは検出されませんでした
 REPLACE|Replace| 
 PRIVATE_KEY_PATH_FILENAME|with the appropriate path and filename of your private key.|の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください

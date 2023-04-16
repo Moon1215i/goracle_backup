@@ -1,13 +1,13 @@
 <br/>
 <p align="center">
-<img src="img/img1.png" width="400" alt="Moon1215i_twitter">
+<img src="../img/img1.png" width="400" alt="Moon1215i_twitter">
 </a>
 </p>
 <br/>
 
 # goracle_backup
 
-[README English](https://github.com/Moon1215i/goracle_backup/README.md)
+[README Japanese](https://github.com/Moon1215i/goracle_backup/blob/main/translations/README_JP.md)
  
 <br>
 <br>
@@ -77,9 +77,12 @@ chmod +x goracle_backup.sh
 ### 4-1
 次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
 ```
-cd ~ && curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh
+cd ~ && \
+curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh && \
 chmod +x goracle_backup.sh
 ```
+
+<img src="img/../../img/script.png">
 
 <br>
 
@@ -89,11 +92,11 @@ chmod +x goracle_backup.sh
 ./goracle_backup.sh
 ```
 
-英語か日本語を選択します。パスワードを求めらた場合は、入力します。
+* 英語か日本語を選択します。パスワードを求めらた場合は、入力します。
 
 以下のようなプロンプトになります。
 
-`IP Address : 12.34.56.78`は例えです。
+* `IP Address : 12.34.56.78`　は例えです。
 
 ```sh
 GoraGang@Goracle:~$ ./goracle_backup.sh 
@@ -103,7 +106,7 @@ Select a language 言語を選択してください :
 1. English
 2. 日本語
 
-Enter the number 数字を入力してください : 1
+Enter the number 数字を入力してください : 2
 
 
 
@@ -120,32 +123,35 @@ SSH key type         : ed25519
 
 
 
-                             GORACLE Node    =====>>    Local Machine                             
+                             ゴラクルノード    =====>>    ローカルマシン                       
 -----------------------------------------------------------------------------------------------------
 
 mkdir -p ~/Documents/Goracle_node/Goracle_12.34.56.78/ && rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' GoraGang@12.34.56.78:.goracle ~/Documents/Goracle_node/Goracle_12.34.56.78/
 
 -----------------------------------------------------------------------------------------------------
-To download backup file from the GORACLE Node,run the following command in your local machine's terminal
+ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
 
 
 
 
-                             GORACLE Node    <<=====    Local Machine                             
+                             ゴラクルノード    <<=====    ローカルマシン                              
 -----------------------------------------------------------------------------------------------------
 
 rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' ~/Documents/Goracle_node/Goracle_12.34.56.78/.goracle GoraGang@12.34.56.78:.goracle
 
 -----------------------------------------------------------------------------------------------------
-To upload backup files from your local machine to the GORACLE Node,run the following command in your terminal on the local machine.
+-----------------------------------------------------------------------------------------------------
+ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
 
-Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your private key.
+重要:  ~/.ssh/id_ed25519 の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください
 ```
 
 <br>
 
 ### 4-3
-上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
+
+1. 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
+2. **SSH Keyは、実際にご自身がお使いのパスとファイル名に変更してください。**
  
 <br>
 <br>
@@ -154,16 +160,61 @@ Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your p
 
 Terminalを開いて、先ほどのコマンドを貼り付けて、実行してください。
  
+## 5-1 Downloading '.goracle'
+
+<img src="img/download1.png">
+
+1. Copy the displayed command.
+2. Open the terminal on your regular machine such as Mac, Windows, or Linux.
+3. Paste the command there and run it.
+
+<img src="img/download2.png">
+
+
+
+## 5-2 Uploading '.goracle'
+
+<img src="img/upload1.png">
+
+1. Copy the displayed command.
+2. Open the terminal on your regular machine such as Mac, Windows, or Linux.
+3. Paste the command there and run it.
+
+<img src="img/upload2.png">
+
+ 1. I deleted the `.goracle` file on the Goracle node in advance.
+ 2. Execute the upload command on your local machine such as Mac, Windows, or Linux.
+ 3. The `.goracle` file should be visible after the upload.
+ 4. By opening the `.goracle` file, we can confirm that it has been restored to its original state.
+
 <br>
 <br>
 
 Note: 
-* Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができましファイルがある
+* Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。
  
 <br>
 <br>
 
-## Author
+# 6. 著者
 
-* @11ppm
-   
+
+**Github**<br>
+https://github.com/Moon1215i
+
+<br>  
+
+**Goracle Node SETUP INSTRUCTIONS【English & 日本語】**<br>
+https://qiita.com/Moon1215i/items/72d7d98d3a2269f177ef
+
+<br>
+
+**Algorand Node with Goracle【English & 日本語】**<br>
+https://qiita.com/Moon1215i/items/eb4f40c2337ae9b7bf0f
+
+<br>
+
+**Twitter** <br>
+https://twitter.com/Moon1215i
+
+<img src="img/../../img/twitter.png">

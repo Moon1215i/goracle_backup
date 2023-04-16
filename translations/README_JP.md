@@ -7,7 +7,7 @@
 
 # goracle_backup
 
-[README English](https://github.com/Moon1215i/goracle_backup/README.md)
+[README English](https://github.com/Moon1215i/goracle_backup)
  
 <br>
 <br>
@@ -92,11 +92,11 @@ chmod +x goracle_backup.sh
 ./goracle_backup.sh
 ```
 
-英語か日本語を選択します。パスワードを求めらた場合は、入力します。
+* 英語か日本語を選択します。パスワードを求めらた場合は、入力します。
 
-以下のようなプロンプトになります。
+以下のようなプロンプトになります。ここではSSH Keyがある場合のプロンプトを示しています。
 
-`IP Address : 12.34.56.78`は例えです。
+* `IP Address : 12.34.56.78`　は例えです。
 
 ```sh
 GoraGang@Goracle:~$ ./goracle_backup.sh 
@@ -149,15 +149,44 @@ rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' ~/Documents/Goracle
 <br>
 
 ### 4-3
-上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
+
+1. 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
+2. **SSH Keyは、実際にご自身がお使いのパスとファイル名に変更してください。**
  
 <br>
 <br>
 
 # 5. ローカルマシン（Linux,Mac,WSL2の場合）
 
-Terminalを開いて、先ほどのコマンドを貼り付けて、実行してください。
+MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほどのコマンドを貼り付けて、実行します。
  
+## 5-1 `.goracle`ファイルをダウンロード
+
+<img src="../img/download1.png">
+
+1. 表示されたコマンドをコピーします
+2. あなたが普段使っているMacやWindowsやLinuxでターミナルを開きます。
+3. そこにペーストして、コマンドを実行します
+
+<img src="../img/download2.png">
+
+
+
+## 5-2 `.goracle`ファイルをアップロード
+
+<img src="../img/upload1.png">
+
+1. 表示されたコマンドをコピーします
+2. あなたが普段使っているMacやWindowsやLinuxでターミナルを開きます。
+3. そこにペーストして、コマンドを実行します
+
+<img src="../img/upload2.png">
+
+ 1. 事前にGoracleノードの`.goracle`を削除しておきました
+ 2. MacやWindowsやLinuxなどのローカルマシンでアップロードコマンドを実行します
+ 3. アップロードされて、`.goracle`が見えます
+ 4. `.goracle`を開くと元に戻っていることがわかります。
+
 <br>
 <br>
 
