@@ -180,6 +180,8 @@ MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほ
 2. あなたが普段使っているMacやWindowsやLinuxでターミナルを開きます。
 3. そこにペーストして、コマンドを実行します
 
+<br>
+
 <img src="../img/upload2.png">
 
  1. 事前にGoracleノードの`.goracle`を削除しておきました
@@ -188,16 +190,17 @@ MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほ
  4. `.goracle`を開くと元に戻っていることがわかります。
 
 <br>
-<br>
 
-Note: 
-* Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。
+**Note : Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。**
  
 <br>
 <br>
 
 # 6. 著者
 
+@Moon1215i
+
+<br>
 
 **Github**<br>
 https://github.com/Moon1215i
@@ -207,14 +210,18 @@ https://github.com/Moon1215i
 **Goracle Node SETUP INSTRUCTIONS【English & 日本語】**<br>
 https://qiita.com/Moon1215i/items/72d7d98d3a2269f177ef
 
+<a href="https://qiita.com/Moon1215i/items/72d7d98d3a2269f177ef"><img src="../img/Qiita_Gora.png"></a>
+
 <br>
 
 **Algorand Node with Goracle【English & 日本語】**<br>
 https://qiita.com/Moon1215i/items/eb4f40c2337ae9b7bf0f
+
+<a href="https://qiita.com/Moon1215i/items/eb4f40c2337ae9b7bf0f"><img src="../img/Qiita_Algo.png"></a>
 
 <br>
 
 **Twitter** <br>
 https://twitter.com/Moon1215i
 
-<img src="img/../../img/twitter.png">
+<a href="https://twitter.com/Moon1215i"><img src="../img/twitter.png"></a>

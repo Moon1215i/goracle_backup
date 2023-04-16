@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="../img/img1.png" width="400" alt="Moon1215i_twitter">
+<img src="img/img1.png" width="400" alt="Moon1215i_twitter">
 </a>
 </p>
 <br/>
@@ -12,11 +12,11 @@
 <br>
 <br>
 
-# 1. 概要
-* `rsync`を使って、ゴラクルノードのホームディレクトリ内にある`.goracle`ファイルを、VPSからローカルマシンに転送できるコマンドを作成します
-* 同時に、ローカルマシンからゴラクルノードへバックアップファイルを転送できるコマンドも作成します
-* ゴラクルノードに`.goracle`ファイルがあるどうかを、事前に確認してください。
-* 各種暗号に対応。以下は、スクリプトで検出される可能性のあるファイルがある鍵のタイプのリストです
+# 1. Overview
+1. Create a command to transfer the `.goracle` file in the home directory of the Goracle node to a local machine using `rsync`.
+2. Also create a command to transfer backup files from the local machine to the Goracle node.
+3. Please check in advance if there is a `.goracle` file on the Goracle node.
+4. Supports various ciphers. Below is a list of key types for keys that may be detected by the script:
      * ssh-dss
      * ssh-rsa
      * ecdsa-sha2-nistp
@@ -24,37 +24,43 @@
      * rsa-sha2-256
      * ssh-x25519
      * ssh-x448
-
-  したがって、このスクリプトでは、DSA、RSA、ECDSA、Ed25519、RSA-PSS、x25519、x448の鍵タイプを検知します
-
-* 日本語と英語に対応
-     * `tranlations.csv`を作成し、日本語と英語に対応させました
-     * 必要であれば、他の言語にも対応しますので、お知らせください
+  
+     Therefore, this script detects key types of DSA, RSA, ECDSA, Ed25519, RSA-PSS, x25519, and x448. 
+5. Supports Japanese and English
+     * Created `translations.csv` to correspond to Japanese and English.
+     * If necessary, we can also support other languages, so please let us know.
  
 <br>
 <br>
 
-# 2. 機能
-1. CSVファイルから英語と日本語のメッセージを読み込み、選択された言語に応じてメッセージを表示します
-2. ゴラクルノードの`.goracle`を、ローカルに転送するコマンドを作成します
-3. 同時に、ローカルからゴラクルノードへ、バックアップファイルを`.goracle`に転送するコマンドも作成します
-4. このリポジトリは、`ssh-key`にも対応しています
+# 2. Features
+1. Reads English and Japanese messages from a CSV file and displays messages according to the selected language.
+2. Creates a command to transfer `.goracle` from the Goracle node to the local machine.
+3. Also creates a command to transfer backup files from the local machine to the `.goracle` on the Goracle node.
+4. This repository also supports `ssh-key`.
  
 <br>
 <br>
 
-# 3. rsyncの機能について
-`rsync`は、ファイル同期ツールで、主に異なる場所にあるファイル/ディレクトリを同期するために使用されます。rsyncは、ローカルマシンとリモートマシン間でファイルを同期し、ネットワークを通じてファイルを転送することができます。
+# 3. About rsync's features
+`rsync` is a file synchronization tool used primarily to synchronize files/directories located in different places. rsync can transfer files between a local machine and a remote machine and transfer files over a network.
 
-rsyncの主な特徴は、変更された部分のみを転送できることです。つまり、ソースと宛先のファイルの差分を計算し、差分のある部分だけを転送することで、大量のデータを転送する際に非常に効率的に動作します。
+The main feature of rsync is that it can transfer only the changed parts. That is, by calculating the difference between the source and destination files and transferring only the parts with differences, it operates very efficiently when transferring large amounts of data.
 
-また、rsyncには他にも以下のような利点があります。
+In addition, rsync has other advantages such as the following.
 
-* 転送途中で途切れた場合、途中から再開することができる。
-* 複数のファイルを同期する場合、scpよりも速く転送できることがある。
-* 転送中に進捗状況が表示されるため、転送状況を確認しやすい。
+* If the transfer is interrupted in the middle, it can be resumed from the middle.
+* When synchronizing multiple files, it can be faster than scp.
+* Progress status is displayed during the transfer, making it easy to check the transfer status.
 
-ゴラクルノードには、おそらくrsyncがインストールされています。`rsync --version`で確認できます。インストールされていない場合は、次のコマンドを実行してインストールしてください。
+The Goracle node probably has rsync installed. You can check it with `rsync --version`. 
+
+<img src="img/rsync.png">
+
+<br>
+
+If it is not installed, please run the following command to install it.
+
 ```sh
 sudo apt install rsync
 ```
@@ -74,15 +80,16 @@ chmod +x goracle_backup.sh
 もしくは -->
 <br>
 
-### 4-1
-次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
+### 4-1 Download and set permissions for goracle_backup.sh on Goracle node
+Run the following command to download the `goracle_backup.sh` file from the **[GitHub repository](https://github.com/Moon1215i/goracle_backup)** to the Goracle node's home directory and change the file's permissions to allow execution.
+
 ```
 cd ~ && \
 curl -O https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/goracle_backup.sh && \
 chmod +x goracle_backup.sh
 ```
 
-<img src="img/../../img/script.png">
+<img src="img/script.png">
 
 <br>
 
@@ -196,8 +203,11 @@ Note:
 <br>
 <br>
 
-# 6. 著者
+# Auther
 
+@Moon1215i
+
+<br>
 
 **Github**<br>
 https://github.com/Moon1215i
@@ -207,14 +217,18 @@ https://github.com/Moon1215i
 **Goracle Node SETUP INSTRUCTIONS【English & 日本語】**<br>
 https://qiita.com/Moon1215i/items/72d7d98d3a2269f177ef
 
+<a href="https://qiita.com/Moon1215i/items/72d7d98d3a2269f177ef"><img src="img/Qiita_Gora.png"></a>
+
 <br>
 
 **Algorand Node with Goracle【English & 日本語】**<br>
 https://qiita.com/Moon1215i/items/eb4f40c2337ae9b7bf0f
+
+<a href="https://qiita.com/Moon1215i/items/eb4f40c2337ae9b7bf0f"><img src="img/Qiita_Algo.png"></a>
 
 <br>
 
 **Twitter** <br>
 https://twitter.com/Moon1215i
 
-<img src="img/../../img/twitter.png">
+<a href="https://twitter.com/Moon1215i"><img src="img/twitter.png"></a>
