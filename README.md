@@ -90,7 +90,8 @@ chmod +x goracle_backup.sh
 
 ### 4-1 Download and set permissions for goracle_backup.sh on Goracle node
 <br>
-Run the following command to download the `goracle_backup.sh` file from the [GitHub repository](https://github.com/Moon1215i/goracle_backup) to the Goracle node's home directory and change the file's permissions to allow execution.
+
+Run the following command to download the `goracle_backup.sh` file from the **[GitHub repository](https://github.com/Moon1215i/goracle_backup)** to the Goracle node's home directory and change the file's permissions to allow execution.
 
 <br>
 

@@ -80,8 +80,10 @@ chmod +x goracle_backup.sh
 <br>
 
 ### 4-1 Goracleノードへの`goracle_backup.sh`のダウンロードと実行権限付与
+
 <br>
-次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
+
+次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルを **[GitHub repository](https://github.com/Moon1215i/goracle_backup)** からダウンロードし実行権限を変更します。
 
 ```
 cd ~ && \
