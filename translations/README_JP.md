@@ -5,10 +5,14 @@
 </p>
 <br/>
 
-# goracle_backup
+# ゴラクル・バックアップ・リポジトリ
 
 [README English](https://github.com/Moon1215i/goracle_backup)
- 
+
+`.goracle`は、Goracleノードの設定ファイルで、Algorandネットワーク上のGoracleノードが参加するためのアカウントと、Algorandノードへの接続情報が含まれています。Goracleノードを初期化する際に、このファイルが作成されます。この極めて重要なファイルをバックアップすることは、Goracleノードオペレーターにとって最優先のタスクです。また、Goracleノードの不具合やVPSの問題、別のVPSに移行する際にも必要となります。このため、バックアップや復元に役立つリポジトリを作成しました。GoracleチームやGoraGangの方々がお役に立てることを願っています。
+
+ @Moon1215i
+
 <br>
 <br>
 
@@ -62,7 +66,7 @@ sudo apt install rsync
 <br>
 <br>
 
-## 4. スクリプトの実行
+## 4. goracle_backup リポジトリ
 
 <!--
 リポジトリを`git clone`し、`goracle_backup`ディレクトリに入り、`goracle_backup.sh`の実行権限を変更します。
@@ -74,7 +78,8 @@ chmod +x goracle_backup.sh
 もしくは -->
 <br>
 
-### 4-1
+### 4-1 Goracleノードへの`goracle_backup.sh`のダウンロードと実行権限付与
+<br>
 次のコマンドを実行し、Goracleノードのホームディレクトリに`goracle_backup.sh`ファイルをダウンロードし実行権限を変更します。
 ```
 cd ~ && \
@@ -86,8 +91,10 @@ chmod +x goracle_backup.sh
 
 <br>
 
-### 4-2
-シェルスクリプトを実行します
+### 4-2 Goracleバックアップシェルスクリプトの実行
+<br>
+シェルスクリプトを実行します。
+
 ```sh
 ./goracle_backup.sh
 ```
@@ -99,7 +106,7 @@ chmod +x goracle_backup.sh
 * `IP Address : 12.34.56.78`　は例えです。
 
 ```sh
-GoraGang@Goracle:~$ ./goracle_backup.sh 
+GGoraGang@Goracle:~$ ./goracle_backup.sh 
 
 Select a language 言語を選択してください :
 
@@ -112,43 +119,43 @@ Enter the number 数字を入力してください : 2
 
                                        Your GORACLE Node                                          
 -----------------------------------------------------------------------------------------------------
-IP Address           : 12.34.56.78
+IP Address           : 154.26.158.39
 User                 : GoraGang
 Backup File          : .goracle
-Local Directory      : ~/Documents/Goracle_node/Goracle_12.34.56.78/
-SSH Port             : 54865
+Local Directory      : ~/Documents/Goracle_node/Goracle_154.26.158.39/
+SSH Port             : 53814
 SSH key type         : ed25519
 -----------------------------------------------------------------------------------------------------
 
 
 
 
-                             ゴラクルノード    =====>>    ローカルマシン                       
+                             ゴラクルノード    =====>>    ローカルマシン                             
 -----------------------------------------------------------------------------------------------------
 
-mkdir -p ~/Documents/Goracle_node/Goracle_12.34.56.78/ && rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' GoraGang@12.34.56.78:.goracle ~/Documents/Goracle_node/Goracle_12.34.56.78/
+mkdir -p ~/Documents/Goracle_node/Goracle_154.26.158.39/ && rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 53814' GoraGang@154.26.158.39:.goracle ~/Documents/Goracle_node/Goracle_154.26.158.39/
 
 -----------------------------------------------------------------------------------------------------
-ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
+ゴラクルノードからバックアップファイルをダウンロードするには、ローカルマシンの端末でこのコマンドを実行します
 
 
 
 
-                             ゴラクルノード    <<=====    ローカルマシン                              
+                             ゴラクルノード    <<=====    ローカルマシン                             
 -----------------------------------------------------------------------------------------------------
 
-rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' ~/Documents/Goracle_node/Goracle_12.34.56.78/.goracle GoraGang@12.34.56.78:.goracle
+rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 53814' ~/Documents/Goracle_node/Goracle_154.26.158.39/.goracle GoraGang@154.26.158.39:.goracle
 
 -----------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------
-ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
+ローカルマシンからバックアップファイルをゴラクルノードにアップロードするには、ローカルマシンのターミナルでこのコマンドを実行します
+
 
 重要:  ~/.ssh/id_ed25519 の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください
 ```
 
 <br>
 
-### 4-3
+### 4-3 RsyncコマンドのコピーとSSHキーパスとファイル名の編集
 
 1. 上記の2つの`rsync`コマンドをコピーして、メモ帳にでも保存してください。
 2. **SSH Keyは、実際にご自身がお使いのパスとファイル名に変更してください。**
@@ -156,9 +163,9 @@ rsync -avz --progress -e 'ssh -i ~/.ssh/id_ed25519 -p 54865' ~/Documents/Goracle
 <br>
 <br>
 
-# 5. ローカルマシン（Linux,Mac,WSL2の場合）
+# 5. ローカルマシンからの実行
 
-MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほどのコマンドを貼り付けて、実行します。
+Mac、Windows、またはLinuxなどローカルマシン上でTerminalを開いて、先ほどのコマンドを貼り付けて、実行してください。
  
 ## 5-1 `.goracle`ファイルをダウンロード
 
@@ -170,6 +177,29 @@ MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほ
 
 <img src="../img/download2.png">
 
+`.ssh`フォルダを開いて、`.goracle`ファイルがダウンロードされていることを確認してください。
+
+<br>
+
+**以下は各OS毎の`.ssh`フォルダの場所と見つける手順です。**
+
+<br>
+
+### Mac
+`.ssh`フォルダは、ユーザーホームディレクトリの`隠しフォルダ`にあります。Finderで.`ssh`フォルダを表示するには、ユーザーホームフォルダを開き、`コマンド+シフト+.(ドット)`を押します。`.ssh`フォルダが表示されます。
+
+<br>
+
+### Windows
+`.ssh`フォルダは、通常、ユーザーホームディレクトリの`隠しフォルダ`にあります。フォルダを表示するには、エクスプローラで表示オプションを変更する必要があります。[こちらの記事](https://www.howtogeek.com/446/show-hidden-files-and-folders-in-windows/)に従って、隠しフォルダを表示する方法を確認してください。
+
+<br>
+
+### Linux
+`.ssh`フォルダは、ユーザーホームディレクトリにあります。ターミナルで、`cd ~/.ssh`を実行して.sshフォルダに移動できます。.sshフォルダが存在しない場合は、`ssh-keygen`コマンドを使用してキーペアを生成することができます。
+
+<br>
+<br>
 
 
 ## 5-2 `.goracle`ファイルをアップロード
@@ -196,9 +226,29 @@ MacやWindows、LinuxなどのローカルマシンでTerminalを開き、先ほ
 <br>
 <br>
 
-# 6. 著者
+# 6. Q & A
 
-@Moon1215i
+**質問**<br>
+GoracleノードのセットされているVPSをハードリセットしたり、他のVPSに変更することは可能ですか？
+
+<br>
+
+**回答**<br>
+はい、できます。既存の`~/.goracle`の設定ファイルの中身を、新しくGoracleノードをセットアップしたVPSに貼り付けてください。もしくは、既存の`.goracle`設定ファイルを使用して新しいVPSで`./goracle init`を実行することもできます。
+
+<br>
+
+**補足**<br>
+`.goracle`ファイルのバックアップと復元には、SFTPを使用することができます。`SFTP` (Secure File Transfer Protocol)は、FTPプロトコルを拡張した、暗号化されたファイル転送プロトコルです。SFTPは、SSHプロトコルを使用して認証情報や転送されるファイルを暗号化します。これにより、ファイルの機密性が保護され、転送時に中間者攻撃に対するセキュリティが向上します。SFTPは、LinuxやUNIXなどのオペレーティングシステムに標準で含まれているため、多くのサーバーで利用できます。
+
+有名なSFTPクライアントアプリとしては、`FileZilla`、`WinSCP`、`Putty`などがあります。また`Termius`などのターミナルソフトにも付属しています。これらのアプリは、Windows、Mac、Linuxなどの多くのオペレーティングシステムで利用できます。
+
+<br>
+<br>
+
+# 著者
+
+### @Moon1215i
 
 <br>
 
