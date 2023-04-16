@@ -5,7 +5,8 @@
 </p>
 <br/>
 
-# ゴラクル・バックアップ・リポジトリ
+# Goracle Backup Repository for Mac & Linux Users
+**Mac & Linux ユーザーのためにGoracleバックアップリポジトリ**
 
 [README English](https://github.com/Moon1215i/goracle_backup)
 
