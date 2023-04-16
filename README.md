@@ -242,7 +242,7 @@ The `.ssh` folder is usually located in the `hidden folder` of the user's home d
 <br>
 
 Note: 
-* Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。
+* I confirmed that it works on Linux (Ubuntu), Mac, `WSL2` (Windows Subsystem for Linux 2), and Windows 10 and 11 (using `Cygwin`).
  
 <br>
 <br>

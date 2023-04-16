@@ -227,7 +227,7 @@ Windowsで`rsync`や`scp`を使うためには、`WSL2`や`Cygwin`を別途セ�
 
 <br>
 
-**Note : Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。**
+**Note : Linux（Ubuntu）、Mac、`WSL2` (Windows Subsystem for Linux 2) 、Windows10及び11(`Cygwin`使用)で動作確認ができました。**
  
 <br>
 <br>
