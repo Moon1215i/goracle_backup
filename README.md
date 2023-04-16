@@ -34,6 +34,7 @@
 5. Supports Japanese and English
      * Created `translations.csv` to correspond to Japanese and English.
      * If necessary, we can also support other languages, so please let us know.
+6. **Deprecated:<br>To use `rsync` or `scp` on Windows, you need to set up `WSL2` or `Cygwin` separately. Please confirm this on your own, as I do not provide support for them.**
  
 <br>
 <br>
@@ -181,7 +182,10 @@ Note: Replace ~/.ssh/id_ed25519 with the appropriate path and filename of your p
 
 # 5. Executing from local machine
 
-Please run the following command on your local machine's Terminal, whether it is Mac, Windows, or Linux:
+Please open Terminal on your local machine, such as Mac or Linux, and paste the command from earlier to execute it. I have confirmed that it works on Mac, Linux (Ubuntu), `WSL2` (Windows Subsystem for Linux 2), Windows 10 and 11 (using `Cygwin`).
+
+**Important:<br>
+To use `rsync` or `scp` on Windows, you need to set up `WSL2` or `Cygwin` separately. Please confirm this on your own, as I do not provide support for them.**
 
 <br>
 
@@ -208,12 +212,12 @@ Please check that the .goracle file has been downloaded by opening the .ssh fold
 The `.ssh` folder is located in the `hidden folder` of the user's home directory. To show the .ssh folder in Finder, open the user's home folder and press `Command+Shift+.(dot).` The `.ssh` folder will be displayed.
 <br>
 
-### Windows
-The `.ssh` folder is usually located in the `hidden folder` of the user's home directory. To display the folder, you need to change the display option in Explorer. Follow [this article](https://www.howtogeek.com/446/show-hidden-files-and-folders-in-windows/) to learn how to display hidden folders.
-<br>
-
 ### Linux
 The `.ssh` folder is located in the user's home directory. You can navigate to the `.ssh` folder by running `cd ~/.ssh` in the terminal. If the `.ssh` folder does not exist, you can generate a key pair using the `ssh-keygen` command.
+<br>
+
+### Windows **(Deprecated)**
+The `.ssh` folder is usually located in the `hidden folder` of the user's home directory. To display the folder, you need to change the display option in Explorer. Follow [this article](https://www.howtogeek.com/446/show-hidden-files-and-folders-in-windows/) to learn how to display hidden folders.
 <br>
 <br>
 
