@@ -9,7 +9,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # CSVファイル名
-csv_file="https://raw.githubusercontent.com/Moon1215i/goracle_backup/main/translations/translations3.csv"
+csv_file="https://raw.githubusercontent.com/Moon1215i/gora_backup/main/translations/translations3.csv"
 # csv_file="translations3.csv"
 temp_file="/tmp/translations.csv"
 
@@ -67,10 +67,10 @@ ip_address=$(ip addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0
 remote_user=$(whoami)
 
 # リモートバックアップファイルを設定する
-backup_file=".goracle"
+backup_file=".gora"
 
 # バックアップファイルを保存するローカルディレクトリを設定する
-local_dir="~/Documents/Goracle_node/$HOSTNAME"_"$ip_address/"
+local_dir="~/Documents/Gora_node/$HOSTNAME"_"$ip_address/"
 
 # sshd_configファイルからsshポート番号を取得する
 ssh_port=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
@@ -104,13 +104,13 @@ elif grep -q "ssh-x448" ~/.ssh/authorized_keys 2>/dev/null; then
 fi
 echo
 echo
-echo -e "${NC}                                       $YOUR_GORACLE_NODE                                          ${NC}"
+echo -e "${NC}                                       $YOUR_GORA_NODE                                          ${NC}"
 echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
-printf "%-20s : %s\n" "$GORACLE_NODE_IP" "$ip_address"
-printf "%-20s : %s\n" "$GORACLE_NODE_USER" "$remote_user"
-printf "%-20s : %s\n" "$GORACLE_NODE_BACKUP_FILE" "$backup_file"
-printf "%-20s : %s\n" "$GORACLE_NODE_LOCAL_DIR" "$local_dir"
-printf "%-20s : %s\n" "$GORACLE_NODE_SSH_PORT" "$ssh_port"
+printf "%-20s : %s\n" "$GORA_NODE_IP" "$ip_address"
+printf "%-20s : %s\n" "$GORA_NODE_USER" "$remote_user"
+printf "%-20s : %s\n" "$GORA_NODE_BACKUP_FILE" "$backup_file"
+printf "%-20s : %s\n" "$GORA_NODE_LOCAL_DIR" "$local_dir"
+printf "%-20s : %s\n" "$GORA_NODE_SSH_PORT" "$ssh_port"
 
 if [ $sshkey_exists -eq 1 ]; then
     # SSHキーを使用してrsyncを実行する
